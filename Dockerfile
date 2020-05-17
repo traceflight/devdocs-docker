@@ -11,7 +11,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN cd / && \
-    git clone -b master --depth 1 https://github.com/freeCodeCamp/devdocs.git
+    git clone -b master --depth 1 https://github.com/freeCodeCamp/devdocs.git && \
+    cd /devdocs
 
 RUN bundle install --system && \
     rm -rf ~/.gem /root/.bundle/cache /usr/local/bundle/cache && \
