@@ -12,7 +12,7 @@ RUN apt-get update && \
 
 RUN cd / && \
     git clone -b master --depth 1 https://github.com/freeCodeCamp/devdocs.git && \
-    cd /devdocs
+    cd /devdocs && \
     bundle install --system && \
     rm -rf ~/.gem /root/.bundle/cache /usr/local/bundle/cache && \
     thor docs:download --all && \
